@@ -1,18 +1,23 @@
 from replit import clear
 from art import logo
 
+# Addition function
 def add(n1, n2):
   return n1 + n2
 
+# Subtraction function
 def subtract(n1, n2):
   return n1 - n2
 
+# Multiplication function
 def multiply(n1, n2):
   return n1 * n2
 
+# Division function
 def divide(n1, n2):
   return n1 / n2
 
+# Dictionary which maps operator symbols to functions above
 operators = {
   "+" : add, 
   "-" : subtract,
@@ -20,10 +25,12 @@ operators = {
   "/" : divide
 }
 
+# Creating a string of all operator symbols 
 all_symbols = ""
 for key in operators:
   all_symbols += key + " "
 
+# Function which works as the calculator
 def calculator():
   
   print(logo)
@@ -47,10 +54,12 @@ def calculator():
     elif is_done == "n":
       termination = True
       clear()
+      # Function is recursive 
       calculator()
       
     else:
       print("Invalid input")
 
 
+# Calling the function 
 calculator()
